@@ -14,13 +14,13 @@ const Navbar = () => {
           <SearchBar />
 
           <div className="flex gap-4 cursor-pointer">
-            <button className="p-1 rounded-lg hover:bg-blue-200 transition">
+            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
               <Home className=" text-gray-700" />
             </button>
-            <button className="p-1 rounded-lg hover:bg-blue-200 transition">
+            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
               <RefreshCw className=" text-gray-700" />
             </button>
-            <button className="p-1 rounded-lg hover:bg-blue-200 transition">
+            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
               <ShoppingCart className=" text-gray-700" />
             </button>
           </div>

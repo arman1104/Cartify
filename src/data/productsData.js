@@ -1,0 +1,58 @@
+export const products = [
+  // Shoes
+  {
+    id: 1,
+    brand: "Nike",
+    title: "Pegasus 41 Running Shoes For Men.",
+    description: "nike-anthracite-cyber-black-smoke-grey-original",
+    category: "Shoes",
+    price: 11895.0,
+    image: "/images/products/jacket1.jpg",
+  },
+  {
+    id: 2,
+    brand: "Nike",
+    title: "Downshifter 13 Running Shoes For Men.",
+    description: "nike-white-black-hyper-turq-concord-orange-original",
+    category: "Shoes",
+    price: 4295.0,
+    image: "/images/products/jacket1.jpg",
+  },
+  {
+    id: 3,
+    brand: "Nike",
+    title: "Promina Walking Shoes For Men.",
+    description: "-nike-black-parachute-beige-sail-gum-lt-brown-original",
+    category: "Shoes",
+    price: 4995.0,
+    image: "/images/products/jacket1.jpg",
+  },
+  {
+    id: 4,
+    brand: "New Balance",
+    title: "VONGO Running Shoes For Men.",
+    description: "new-balance-gray-parachute-beige-sail-gum-lt-gray-original",
+    category: "Shoes",
+    price: 6545.0,
+    image: "/images/products/jacket1.jpg",
+  },
+  {
+    id: 5,
+    brand: "New Balance",
+    title: "1080 Running Shoes For Men.",
+    description: "new-balance-black-parachute-beige-sail-gum-lt-black-original",
+    category: "Shoes",
+    price: 8200.0,
+    image: "/images/products/jacket1.jpg",
+  },
+  //   Jacket
+  {
+    id: 6,
+    brand: "New Balance",
+    title: "1080 Running Shoes For Men.",
+    description: "new-balance-black-parachute-beige-sail-gum-lt-black-original",
+    category: "Shoes",
+    price: 8200.0,
+    image: "/images/products/jacket1.jpg",
+  },
+];
