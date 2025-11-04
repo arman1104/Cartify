@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   return (
-    <div>
+    <>
       <header className="w-full bg-gray-200 py-4">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
-    </div>
+    </>
   );
 };
 
