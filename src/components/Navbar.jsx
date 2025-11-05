@@ -1,6 +1,7 @@
 import React from "react";
 import { ShoppingCart, Home, RefreshCw } from "lucide-react";
 import SearchBar from "./SearchBar";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,16 +14,37 @@ const Navbar = () => {
 
           <SearchBar />
 
-          <div className="flex gap-4 cursor-pointer">
-            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
-              <Home className=" text-gray-700" />
-            </button>
-            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
+          <div className="flex gap-4">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `p-2 rounded-xl hover:bg-blue-200 transition-colors ${
+                  isActive ? "bg-blue-200" : ""
+                }`
+              }
+            >
+              <button>
+                <Home className=" text-gray-700" />
+              </button>
+            </NavLink>
+            <button className="p-2 rounded-xl hover:bg-blue-200 transition">
               <RefreshCw className=" text-gray-700" />
             </button>
-            <button className="p-2 rounded-lg hover:bg-blue-200 transition">
-              <ShoppingCart className=" text-gray-700" />
-            </button>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                `p-2 rounded-xl hover:bg-blue-200 transition-colors ${
+                  isActive ? "bg-blue-200" : ""
+                }`
+              }
+            >
+              <button className="relative">
+                <ShoppingCart className=" text-gray-700 " />
+                <span className="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
+                  0
+                </span>
+              </button>
+            </NavLink>
           </div>
         </nav>
       </header>
