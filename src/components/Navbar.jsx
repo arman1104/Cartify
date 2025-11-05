@@ -2,8 +2,10 @@ import React from "react";
 import { ShoppingCart, Home, RefreshCw } from "lucide-react";
 import SearchBar from "./SearchBar";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
+  const { cartCount } = useCart();
   return (
     <>
       <header className="w-full bg-gray-200 py-4">
@@ -18,7 +20,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `p-2 rounded-xl hover:bg-blue-200 transition-colors ${
+                `p-2 rounded-lg hover:bg-blue-200 transition-colors ${
                   isActive ? "bg-blue-200" : ""
                 }`
               }
@@ -27,13 +29,13 @@ const Navbar = () => {
                 <Home className=" text-gray-700" />
               </button>
             </NavLink>
-            <button className="p-2 rounded-xl hover:bg-blue-200 transition">
+            <button className="p-2 rounded-lg hover:bg-blue-200 transform transition-transform duration-700 hover:rotate-180">
               <RefreshCw className=" text-gray-700" />
             </button>
             <NavLink
               to="/cart"
               className={({ isActive }) =>
-                `p-2 rounded-xl hover:bg-blue-200 transition-colors ${
+                `p-2 rounded-lg hover:bg-blue-200 transition-colors ${
                   isActive ? "bg-blue-200" : ""
                 }`
               }
@@ -41,8 +43,13 @@ const Navbar = () => {
               <button className="relative">
                 <ShoppingCart className=" text-gray-700 " />
                 <span className="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
-                  0
+                  {cartCount}
                 </span>
+                {/* {cartCount > 0 && (
+                  <span className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
+                    {cartCount}
+                  </span>
+                )} */}
               </button>
             </NavLink>
           </div>
