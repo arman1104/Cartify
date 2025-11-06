@@ -11,6 +11,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     setProducts(ProductData);
@@ -38,7 +39,36 @@ export const CartProvider = ({ children }) => {
   // Calculate cart count
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
-  const value = { cart, setCart, products, setProducts, addToCart, cartCount };
+  //   const filterProducts = () =>
+  //     products.filter((product) =>
+  //       product.title.toLowerCase().includes(search.toLowerCase())
+  //     );
+
+  const filteredProducts =
+    search.trim() === ""
+      ? products
+      : products.filter((product) =>
+          product.title.toLowerCase().includes(search.toLowerCase())
+        );
+
+  const refreshPage = () => {
+    setSearch("");
+    setProducts(ProductData);
+    // window.location.reload(); // for full reload
+  };
+
+  const value = {
+    cart,
+    setCart,
+    products,
+    setProducts,
+    addToCart,
+    cartCount,
+    search,
+    setSearch,
+    filteredProducts,
+    refreshPage,
+  };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

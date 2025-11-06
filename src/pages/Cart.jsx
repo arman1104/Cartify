@@ -1,13 +1,15 @@
 import React from "react";
-import { useCart } from "../context/CartContext"; // ← ADD THIS IMPORT
+import { useCart } from "../context/CartContext";
+import { ShoppingCart, Trash2, Plus, Minus } from "lucide-react";
 
 const Cart = () => {
-  const { cart } = useCart(); // ← Get cart from context
+  const { cart } = useCart();
 
   // Empty cart state
   if (cart.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
+        <ShoppingCart className="w-32 h-32 text-gray-300 mb-4" />
         <h2 className="text-2xl font-bold text-gray-600 mb-2">
           Your cart is empty
         </h2>
@@ -20,7 +22,7 @@ const Cart = () => {
   return (
     <div className="flex flex-col items-center py-8">
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-        🛒 Shopping Cart
+        🛒Your Shopping Cart
       </h1>
       <div className="max-w-4xl w-full px-4">
         {cart.map((item) => (

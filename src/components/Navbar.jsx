@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { cartCount } = useCart();
+  const { cartCount, refreshPage } = useCart();
   return (
     <>
-      <header className="w-full bg-gray-200 py-4">
+      <header className="w-full bg-gray-100 py-4 sticky top-0 z-50 border-b">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
             Cartify <span className="text-3xl">🛍️</span>
@@ -30,7 +30,7 @@ const Navbar = () => {
               </button>
             </NavLink>
             <button className="p-2 rounded-lg hover:bg-blue-200 transform transition-transform duration-700 hover:rotate-180">
-              <RefreshCw className=" text-gray-700" />
+              <RefreshCw className=" text-gray-700" onClick={refreshPage} />
             </button>
             <NavLink
               to="/cart"
