@@ -5,7 +5,7 @@ const Home = () => {
   const { addToCart, filteredProducts, cart } = useCart();
 
   return (
-    <div className="flex flex-col items-center py-8">
+    <div className="flex flex-col items-center py-8 bg-gray-50">
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
         🛍️ Product Gallery
       </h1>
@@ -18,21 +18,24 @@ const Home = () => {
           return (
             <div
               key={product.id}
-              className="border border-gray-300 rounded-lg p-4 shadow w-64 text-center bg-white hover:shadow-md transition-transform duration-300 hover:scale-105"
+              // className="border border-gray-300 rounded-lg p-4 shadow w-64 text-center bg-white hover:shadow-md transition-transform duration-500 hover:scale-105"
+              className="rounded-lg p-4 shadow w-64  bg-white hover:shadow-md transition-transform duration-500 hover:scale-105"
             >
-              <h2 className="text-lg font-semibold text-gray-800 text-center line-clamp-1">
-                {product.brand}
-              </h2>
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-32 h-32 object-contain mx-auto my-3"
+                // className="w-36 h-36 object-contain mx-auto my-3"
+                className="w-56 h-32 object-contain mx-auto my-3"
               />
-              <p className="text-gray-600 text-sm text-center line-clamp-1">
+
+              <h2 className="text-lg font-bold text-gray-800 line-clamp-1">
+                {product.brand}
+              </h2>
+              <p className="text-gray-600 text-md line-clamp-1 mt-1">
                 {product.title}
               </p>
               <div className="mt-3 mb-3">
-                <span className="text-blue-800 bg-blue-100 font-sm px-2 py-[3px] rounded-lg">
+                <span className="text-gray-700 text-lg font-semibold rounded-lg">
                   ₹{product.price}
                 </span>
               </div>
@@ -40,10 +43,10 @@ const Home = () => {
               {/* ✅ Toggle button text based on cart state */}
               <button
                 // className="bg-blue-400 text-white px-2 py-[3px] rounded hover:bg-blue-500 transition"
-                className={`px-2 py-1 rounded transition ${
+                className={`px-3 py-1 rounded transition ${
                   itemInCart
-                    ? "bg-green-400 text-white"
-                    : "bg-blue-400 text-white hover:bg-blue-500"
+                    ? "bg-blue-200 text-gray-800"
+                    : "bg-gray-300 text-gray-800 hover:bg-gray-400"
                 }`}
                 onClick={() => addToCart(product)}
               >

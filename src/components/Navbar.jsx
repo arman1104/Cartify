@@ -8,7 +8,7 @@ const Navbar = () => {
   const { cartCount, refreshPage } = useCart();
   return (
     <>
-      <header className="w-full bg-gray-100 py-4 sticky top-0 z-50 border-b">
+      <header className="w-full bg-gray-50 py-3 sticky top-0 z-50 border-b">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
             Cartify <span className="text-3xl">🛍️</span>
@@ -20,8 +20,8 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `p-2 rounded-lg hover:bg-blue-200 transition-colors ${
-                  isActive ? "bg-blue-200" : ""
+                `p-2 rounded-lg hover:bg-blue-100 transition-colors ${
+                  isActive ? "bg-blue-100" : ""
                 }`
               }
             >
@@ -29,14 +29,14 @@ const Navbar = () => {
                 <Home className=" text-gray-700" />
               </button>
             </NavLink>
-            <button className="p-2 rounded-lg hover:bg-blue-200 transform transition-transform duration-700 hover:rotate-180">
+            <button className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180">
               <RefreshCw className=" text-gray-700" onClick={refreshPage} />
             </button>
             <NavLink
               to="/cart"
               className={({ isActive }) =>
-                `p-2 rounded-lg hover:bg-blue-200 transition-colors ${
-                  isActive ? "bg-blue-200" : ""
+                `p-2 rounded-lg hover:bg-blue-100 transition-colors ${
+                  isActive ? "bg-blue-100" : ""
                 }`
               }
             >

@@ -33,16 +33,16 @@ export const CartProvider = ({ children }) => {
       // if not in cart → add new one
       return [...prevCart, { ...product, quantity: 1 }];
     });
-    console.log("✅ Added to cart:", product.title);
+    // console.log("Added to cart:", product.title);
   };
 
   // Calculate cart count
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
-  //   const filterProducts = () =>
-  //     products.filter((product) =>
-  //       product.title.toLowerCase().includes(search.toLowerCase())
-  //     );
+  // const filteredProducts = () =>
+  //   products.filter((product) =>
+  //     product.title.toLowerCase().includes(search.toLowerCase())
+  //   );
 
   const filteredProducts =
     search.trim() === ""
@@ -57,6 +57,11 @@ export const CartProvider = ({ children }) => {
     // window.location.reload(); // for full reload
   };
 
+  const removeFromCart = (id) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    console.log("Deleted data from Cart");
+  };
+
   const value = {
     cart,
     setCart,
@@ -68,6 +73,7 @@ export const CartProvider = ({ children }) => {
     setSearch,
     filteredProducts,
     refreshPage,
+    removeFromCart,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
