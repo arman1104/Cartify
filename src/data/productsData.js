@@ -205,10 +205,10 @@ export const products = [
   {
     id: 19,
     brand: "Snitch",
-    title: "Printed Spread Collar Casual Shirt",
-    description: "snitch-slim-fit-printed-spread-collar-casual-shirt-original",
+    title: "Embroidered Box Fit Shirt",
+    description: "snitch-embroidered-box-fit-printed-casual-shirt-original",
     category: "Men's Shirts",
-    price: 998,
+    price: 1598,
     image: shirt3,
   },
   {
