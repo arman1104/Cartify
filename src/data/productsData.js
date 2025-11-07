@@ -7,8 +7,20 @@ import shoes6 from "../assets/images/shoes6.webp";
 import jacket1 from "../assets/images/jacket1.webp";
 import jacket2 from "../assets/images/jacket2.webp";
 import jacket3 from "../assets/images/jacket3.webp";
-import jacket4 from "../assets/images/jacket4.webp";
-import jacket5 from "../assets/images/jacket5.webp";
+// import jacket4 from "../assets/images/jacket4.webp";
+import jacket4 from "../assets/images/jacket4.png";
+// import jacket5 from "../assets/images/jacket5.webp";
+import jacket5 from "../assets/images/jacket5.png";
+import jeans1 from "../assets/images/jeans1.png";
+import jeans2 from "../assets/images/jeans2.png";
+import jeans3 from "../assets/images/jeans3.png";
+import jeans4 from "../assets/images/jeans4.png";
+import jeans5 from "../assets/images/jeans5.png";
+import shirt1 from "../assets/images/shirt1.png";
+import shirt2 from "../assets/images/shirt2.png";
+import shirt3 from "../assets/images/shirt3.png";
+import shirt4 from "../assets/images/shirt4.png";
+import shirt5 from "../assets/images/shirt5.png";
 
 export const products = [
   // Shoes
@@ -108,7 +120,7 @@ export const products = [
   {
     id: 10,
     brand: "Flying Machine",
-    title: "Solid Casual Jacket",
+    title: "Solid Puffer Jacket",
     description: "flying-machine-original",
     category: "Men's Jacket",
     price: 2999,
@@ -117,10 +129,105 @@ export const products = [
   {
     id: 11,
     brand: "Killer",
-    title: "Colorblock Quilted Jacket",
+    title: "Solid Quilted Jacket",
     description: "killer-original",
     category: "Men's Jacket",
-    price: 2889,
+    price: 2049,
     image: jacket5,
+  },
+
+  // Jeans
+  {
+    id: 12,
+    brand: "Levi's",
+    title: "512 Slim Mid Rise Blue Jeans",
+    description: "levis-blue-slim-fit-stretchable-mid-rise-jeans-original",
+    category: "Men's Jeans",
+    price: 1589,
+    image: jeans1,
+  },
+  {
+    id: 13,
+    brand: "Pepe Jeans",
+    title: "Straight Fit Mid Rise Blue Jeans",
+    description: "pepejeans-straight-fit-mid-rise-blue-denim-original",
+    category: "Men's Jeans",
+    price: 1349,
+    image: jeans2,
+  },
+  {
+    id: 14,
+    brand: "Lee",
+    title: "Slim Mid Rise Dark Blue Jeans",
+    description: "lee-slim-fit-mid-rise-darkblue-denim-original",
+    category: "Men's Jeans",
+    price: 1253,
+    image: jeans3,
+  },
+  {
+    id: 15,
+    brand: "Mufti",
+    title: "Skinny Mid Rise Grey Jeans",
+    description: "mufti-skinny-fit-mid-rise-grey-denim-original",
+    category: "Men's Jeans",
+    price: 1449,
+    image: jeans4,
+  },
+  {
+    id: 16,
+    brand: "Wrangler",
+    title: "Regular Mid Rise Grey Jeans",
+    description: "wrangler-regular-fit-mid-rise-grey-denim-original",
+    category: "Men's Jeans",
+    price: 1279,
+    image: jeans5,
+  },
+  // Shirts
+  {
+    id: 17,
+    brand: "Roadster",
+    title: "Spread Collar Casual Shirt",
+    description:
+      "roadster-orange-regular-fit-checkered-spread-collar-casual-shirt-original",
+    category: "Men's Shirts",
+    price: 999,
+    image: shirt1,
+  },
+  {
+    id: 18,
+    brand: "Wrogn",
+    title: "Slim Fit Solid Casual Shirt",
+    description: "wrogn-white-slim-fit-solid-casual-shirt-original",
+    category: "Men's Shirts",
+    price: 1999,
+    image: shirt2,
+  },
+  {
+    id: 19,
+    brand: "Snitch",
+    title: "Printed Spread Collar Casual Shirt",
+    description: "snitch-slim-fit-printed-spread-collar-casual-shirt-original",
+    category: "Men's Shirts",
+    price: 998,
+    image: shirt3,
+  },
+  {
+    id: 20,
+    brand: "Rare Rabbit",
+    title: "Solid Button Down Collar Casual Shirt",
+    description:
+      "rarerabbit-slim-fit-solid-buttondown-collar-casual-shirt-original",
+    category: "Men's Shirts",
+    price: 2099,
+    image: shirt4,
+  },
+  {
+    id: 21,
+    brand: "Arrow",
+    title: "Striped Spread Collar Casual Shirt",
+    description: "arrow-slim-fit-striped-spread-collar-casual-shirt-original",
+    category: "Men's Shirts",
+    price: 1199,
+    image: shirt5,
   },
 ];

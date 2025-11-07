@@ -3,7 +3,8 @@ import { useCart } from "../context/CartContext";
 import { ShoppingCart, Trash2, Plus, Minus } from "lucide-react";
 
 const Cart = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, increaseQuantity, decreaseQuantity } =
+    useCart();
 
   // Empty cart state
   if (cart.length === 0) {
@@ -28,9 +29,9 @@ const Cart = () => {
       </div>
 
       {/* Container: left (items) / right (summary) */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 ">
         {/* Left: Items list */}
-        <div className="flex-1 bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+        <div className="flex-1 bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden ">
           {/* Header row */}
           <div className="hidden md:flex items-center bg-gray-100 px-6 py-3 text-sm font-semibold text-gray-700">
             <div className="flex-1">Product</div>
@@ -41,7 +42,7 @@ const Cart = () => {
           </div>
 
           {/* Items */}
-          <div>
+          <div className="">
             {cart.map((item) => (
               <div
                 key={item.id}
@@ -74,11 +75,17 @@ const Cart = () => {
                     Quantity
                   </div> */}
                   <button className="p-1 rounded-md border border-gray-300 hover:bg-gray-100 transition">
-                    <Minus className="w-4 h-4 text-gray-600" />
+                    <Minus
+                      className="w-4 h-4 text-gray-600"
+                      onClick={() => decreaseQuantity(item.id)}
+                    />
                   </button>
                   <div className="font-semibold">{item.quantity}</div>
                   <button className="p-1 rounded-md border border-gray-300 hover:bg-gray-100 transition">
-                    <Plus className="w-4 h-4 text-gray-600" />
+                    <Plus
+                      className="w-4 h-4 text-gray-600"
+                      onClick={() => increaseQuantity(item.id)}
+                    />
                   </button>
                 </div>
 
