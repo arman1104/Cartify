@@ -12,6 +12,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     setProducts(ProductData);
@@ -95,6 +96,8 @@ export const CartProvider = ({ children }) => {
     removeFromCart,
     increaseQuantity,
     decreaseQuantity,
+    selectedProduct,
+    setSelectedProduct,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

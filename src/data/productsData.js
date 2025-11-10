@@ -34,6 +34,7 @@ export const products = [
     category: "Shoes",
     price: 11895,
     image: shoes1,
+    sizes: ["7", "8", "9", "10", "11", "12"],
   },
   {
     id: 2,
@@ -44,6 +45,7 @@ export const products = [
     category: "Shoes",
     price: 4295,
     image: shoes2,
+    sizes: ["7", "8", "9", "10", "11", "12"],
   },
   {
     id: 3,
@@ -54,6 +56,7 @@ export const products = [
     category: "Shoes",
     price: 4995,
     image: shoes3,
+    sizes: ["7", "8", "9", "10", "11", "12"],
   },
 
   {
@@ -65,6 +68,7 @@ export const products = [
     category: "Shoes",
     price: 6370,
     image: shoes4,
+    sizes: ["7", "8", "9", "10", "11", "12"],
   },
   {
     id: 5,
@@ -75,6 +79,7 @@ export const products = [
     category: "Shoes",
     price: 5390,
     image: shoes5,
+    sizes: ["7", "8", "9", "10", "11", "12"],
   },
   // {
   //   id: 6,
@@ -84,6 +89,7 @@ export const products = [
   //   category: "Shoes",
   //   price: 4319,
   //   image: shoes6,
+  //  sizes: ["7", "8", "9", "10", "11", "12"],
   // },
 
   //   Jacket
@@ -96,6 +102,7 @@ export const products = [
     category: "Men's Jacket",
     price: 6999,
     image: jacket1,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 
   {
@@ -107,6 +114,7 @@ export const products = [
     category: "Men's Jacket",
     price: 6999,
     image: jacket2,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 9,
@@ -116,6 +124,7 @@ export const products = [
     category: "Men's Jacket",
     price: 5499,
     image: jacket3,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 10,
@@ -125,6 +134,7 @@ export const products = [
     category: "Men's Jacket",
     price: 2999,
     image: jacket4,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 11,
@@ -134,6 +144,7 @@ export const products = [
     category: "Men's Jacket",
     price: 2049,
     image: jacket5,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 
   // Jeans
@@ -145,6 +156,7 @@ export const products = [
     category: "Men's Jeans",
     price: 1589,
     image: jeans1,
+    sizes: ["28", "30", "32", "34", "36", "38"],
   },
   {
     id: 13,
@@ -154,6 +166,7 @@ export const products = [
     category: "Men's Jeans",
     price: 1349,
     image: jeans2,
+    sizes: ["28", "30", "32", "34", "36", "38"],
   },
   {
     id: 14,
@@ -163,6 +176,7 @@ export const products = [
     category: "Men's Jeans",
     price: 1253,
     image: jeans3,
+    sizes: ["28", "30", "32", "34", "36", "38"],
   },
   {
     id: 15,
@@ -172,6 +186,7 @@ export const products = [
     category: "Men's Jeans",
     price: 1449,
     image: jeans4,
+    sizes: ["28", "30", "32", "34", "36", "38"],
   },
   {
     id: 16,
@@ -181,6 +196,7 @@ export const products = [
     category: "Men's Jeans",
     price: 1279,
     image: jeans5,
+    sizes: ["28", "30", "32", "34", "36", "38"],
   },
   // Shirts
   {
@@ -192,6 +208,7 @@ export const products = [
     category: "Men's Shirts",
     price: 999,
     image: shirt1,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 18,
@@ -201,6 +218,7 @@ export const products = [
     category: "Men's Shirts",
     price: 1999,
     image: shirt2,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 19,
@@ -210,6 +228,7 @@ export const products = [
     category: "Men's Shirts",
     price: 1598,
     image: shirt3,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 20,
@@ -220,6 +239,7 @@ export const products = [
     category: "Men's Shirts",
     price: 2099,
     image: shirt4,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 21,
@@ -229,5 +249,6 @@ export const products = [
     category: "Men's Shirts",
     price: 1199,
     image: shirt5,
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
 ];

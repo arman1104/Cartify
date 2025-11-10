@@ -1,10 +1,16 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
 import { ShoppingCart, Trash2, Plus, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } =
     useCart();
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    navigate(`/product/${product.id}`);
+  };
 
   // Empty cart state
   if (cart.length === 0) {
@@ -49,7 +55,10 @@ const Cart = () => {
                 className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-4 px-4 py-5 border-b last:border-b-0 hover:bg-gray-50 transition-colors"
               >
                 {/* Product info */}
-                <div className="flex items-start md:items-center gap-4 flex-1">
+                <div
+                  className="flex items-start md:items-center gap-4 flex-1 cursor-pointer"
+                  onClick={() => handleProductClick(item)}
+                >
                   <img
                     src={item.image}
                     alt={item.title}

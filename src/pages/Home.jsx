@@ -1,8 +1,15 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const { addToCart, filteredProducts, cart } = useCart();
+  const { addToCart, filteredProducts, cart, setSelectedProduct } = useCart();
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); //  store selected product in context
+    navigate(`/product/${product.id}`); //  go to product details page
+  };
 
   return (
     <div className="flex flex-col items-center py-8 bg-gray-50">
@@ -19,7 +26,8 @@ const Home = () => {
             <div
               key={product.id}
               // className="border border-gray-300 rounded-lg p-4 shadow w-64 text-center bg-white hover:shadow-md transition-transform duration-500 hover:scale-105"
-              className="rounded-lg p-4 shadow w-64  bg-white hover:shadow-md transition-transform duration-500 hover:scale-105"
+              className="rounded-lg p-4 shadow w-64  bg-white hover:shadow-md transition-transform duration-500 hover:scale-105 cursor-pointer"
+              onClick={() => handleProductClick(product)} //  add click
             >
               <img
                 src={product.image}
@@ -48,7 +56,11 @@ const Home = () => {
                     ? "bg-blue-200 text-gray-800"
                     : "bg-gray-300 text-gray-800 hover:bg-gray-400"
                 }`}
-                onClick={() => addToCart(product)}
+                // onClick={() => addToCart(product)}
+                onClick={(e) => {
+                  e.stopPropagation(); // 🛑 prevent triggering product click
+                  addToCart(product);
+                }}
               >
                 {itemInCart
                   ? `In Cart (${itemInCart.quantity})`
