@@ -13,11 +13,11 @@ const Home = () => {
 
   return (
     <div className=" flex flex-col items-center py-8 bg-gray-50">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-        🛍️ Product Gallery
-      </h1>
+      <div className="w-full max-w-8xl pl-24 mb-8">
+        <h1 className="text-3xl font-bold text-gray-800">🛍️ Product Gallery</h1>
+      </div>
 
-      <div className="flex flex-wrap justify-center gap-4 max-w-8xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-4 max-w-8xl mx-auto ">
         {filteredProducts.map((product) => {
           // ✅ Check if this product is already in the cart
           const itemInCart = cart.find((item) => item.id === product.id);
