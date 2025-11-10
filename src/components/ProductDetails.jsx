@@ -18,7 +18,7 @@ const ProductDetails = () => {
     );
   }
 
-  // local quantity + size state (no UI layout change)
+  // local quantity + size state
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(product.sizes?.[0] ?? "");
 

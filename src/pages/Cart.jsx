@@ -141,12 +141,12 @@ const Cart = () => {
 
               <div className="flex justify-between">
                 <span>Shipping estimate</span>
-                <span>₹5.00</span>
+                <span>₹10.00</span>
               </div>
 
               <div className="flex justify-between border-b border-gray-200 pb-3">
-                <span>Tax estimate</span>
-                <span>₹23.20</span>
+                <span>Service Charge</span>
+                <span>₹10.10</span>
               </div>
             </div>
 
@@ -159,8 +159,8 @@ const Cart = () => {
                     (total, item) => total + item.price * item.quantity,
                     0
                   ) +
-                  5 +
-                  23.2
+                  10 +
+                  10
                 ).toFixed(2)}
               </span>
             </div>
