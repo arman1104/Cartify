@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className=" flex flex-col items-center py-8 bg-gray-50">
-      <div className="w-full max-w-8xl pl-24 mb-8">
+      <div className="w-full max-w-8xl pl-20 mb-8">
         <h1 className="text-3xl font-bold text-gray-800">🛍️ Product Gallery</h1>
       </div>
 
