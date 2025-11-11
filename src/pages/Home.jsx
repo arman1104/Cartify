@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className=" flex flex-col items-center py-8 bg-gray-50">
-      <div className="w-full max-w-8xl pl-20 mb-8">
+      <div className="w-full max-w-8xl pl-12 lg:pl-20 mb-8">
         <h1 className="text-3xl font-bold text-gray-800">🛍️ Product Gallery</h1>
       </div>
 
@@ -34,6 +34,7 @@ const Home = () => {
                 alt={product.title}
                 // className="w-36 h-36 object-contain mx-auto my-3"
                 className="w-56 h-32 object-contain mx-auto my-3"
+                // className="sm:w-52 sm:h-36 md:w-56 md:h-30 lg:w-64 lg:h-32 object-contain mx-auto my-3"
               />
 
               <h2 className="text-lg font-bold text-gray-800 line-clamp-1">
