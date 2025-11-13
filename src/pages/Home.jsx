@@ -43,7 +43,7 @@ const Home = () => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-40 h-32 sm:w-48 sm:h-36 lg:w-56 lg:h-32 object-contain mx-auto my-3"
+                className="w-full h-44 sm:w-full sm:h-36 lg:w-full lg:h-36 object-contain mx-auto my-3"
               />
 
               {/* ---------- TEXTS ---------- */}
