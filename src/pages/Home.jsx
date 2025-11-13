@@ -16,7 +16,7 @@ const Home = () => {
       {/* ---------- HEADING ---------- */}
       <div className="w-full md:max-w-7xl mx-auto mb-8 px-4">
         <h1
-          className="text-3xl font-bold text-gray-800 text-center
+          className="text-3xl font-bold text-gray-800
            sm:text-left"
         >
           🛍️ Product Gallery
@@ -35,7 +35,7 @@ const Home = () => {
               className="
                 bg-white rounded-lg shadow hover:shadow-md transition-transform 
                 duration-500 hover:scale-105 cursor-pointer
-                w-80 sm:w-[48%] md:w-[48%] lg:w-[32%] xl:w-[24%]
+                w-[100%] sm:w-[48%] md:w-[48%] lg:w-[32%] xl:w-[24%]
                 p-4
               "
             >
