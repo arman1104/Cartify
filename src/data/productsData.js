@@ -81,16 +81,16 @@ export const products = [
     image: shoes5,
     sizes: ["7", "8", "9", "10", "11", "12"],
   },
-  // {
-  //   id: 6,
-  //   brand: "Skechers",
-  //   title: "GO WALK ARCH FIT-IDYLLIC Sneakers For Men.",
-  //   description: "skechers-navy-gold-arch-fit-lowtop-original",
-  //   category: "Shoes",
-  //   price: 4319,
-  //   image: shoes6,
-  //  sizes: ["7", "8", "9", "10", "11", "12"],
-  // },
+  {
+    id: 6,
+    brand: "Skechers",
+    title: "GO WALK ARCH FIT-IDYLLIC.",
+    description: "skechers-navy-gold-arch-fit-lowtop-original",
+    category: "Shoes",
+    price: 4319,
+    image: shoes6,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+  },
 
   //   Jacket
   {

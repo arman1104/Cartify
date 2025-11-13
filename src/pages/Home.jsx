@@ -7,61 +7,70 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleProductClick = (product) => {
-    setSelectedProduct(product); //  store selected product in context
-    navigate(`/product/${product.id}`); //  go to product details page
+    setSelectedProduct(product);
+    navigate(`/product/${product.id}`);
   };
 
   return (
-    <div className=" flex flex-col items-center py-8 bg-gray-50">
-      <div className="w-full max-w-8xl pl-12 lg:pl-20 mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">🛍️ Product Gallery</h1>
+    <div className="flex flex-col items-center py-8 bg-gray-50">
+      {/* ---------- HEADING ---------- */}
+      <div className="w-full md:max-w-7xl mx-auto mb-8 px-4">
+        <h1
+          className="text-3xl font-bold text-gray-800 
+           sm:text-left"
+        >
+          🛍️ Product Gallery
+        </h1>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 max-w-8xl mx-auto ">
+      {/* ---------- PRODUCT LIST ---------- */}
+      <div className="w-full md:max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-start lg:justify-between xl:justify-center gap-4 px-4 lg:px-4">
         {filteredProducts.map((product) => {
-          // ✅ Check if this product is already in the cart
           const itemInCart = cart.find((item) => item.id === product.id);
 
           return (
             <div
               key={product.id}
-              // className="border border-gray-300 rounded-lg p-4 shadow w-64 text-center bg-white hover:shadow-md transition-transform duration-500 hover:scale-105"
-              className="rounded-lg p-4 shadow w-64  bg-white hover:shadow-md transition-transform duration-500 hover:scale-105 cursor-pointer"
-              onClick={() => handleProductClick(product)} //  add click
+              onClick={() => handleProductClick(product)}
+              className="
+                bg-white rounded-lg shadow hover:shadow-md transition-transform 
+                duration-500 hover:scale-105 cursor-pointer
+                w-80 sm:w-[48%] md:w-[48%] lg:w-[32%] xl:w-[24%]
+                p-4
+              "
             >
+              {/* ---------- IMAGE ---------- */}
               <img
                 src={product.image}
                 alt={product.title}
-                // className="w-36 h-36 object-contain mx-auto my-3"
-                className="w-56 h-32 object-contain mx-auto my-3"
-                // className="sm:w-52 sm:h-36 md:w-56 md:h-30 lg:w-64 lg:h-32 object-contain mx-auto my-3"
+                className="w-40 h-32 sm:w-48 sm:h-36 lg:w-56 lg:h-32 object-contain mx-auto my-3"
               />
 
+              {/* ---------- TEXTS ---------- */}
               <h2 className="text-lg font-bold text-gray-800 line-clamp-1">
                 {product.brand}
               </h2>
               <p className="text-gray-600 text-md line-clamp-1 mt-1">
                 {product.title}
               </p>
+
               <div className="mt-3 mb-3">
                 <span className="text-gray-700 text-lg font-semibold rounded-lg">
                   ₹{product.price}
                 </span>
               </div>
 
-              {/* ✅ Toggle button text based on cart state */}
+              {/* ---------- BUTTON ---------- */}
               <button
-                // className="bg-blue-400 text-white px-2 py-[3px] rounded hover:bg-blue-500 transition"
-                className={`px-3 py-1 rounded transition ${
+                onClick={(e) => {
+                  e.stopPropagation();
+                  addToCart(product);
+                }}
+                className={` px-4 py-1 rounded transition ${
                   itemInCart
                     ? "bg-blue-200 text-gray-800"
                     : "bg-gray-300 text-gray-800 hover:bg-gray-400"
                 }`}
-                // onClick={() => addToCart(product)}
-                onClick={(e) => {
-                  e.stopPropagation(); // 🛑 prevent triggering product click
-                  addToCart(product);
-                }}
               >
                 {itemInCart
                   ? `In Cart (${itemInCart.quantity})`

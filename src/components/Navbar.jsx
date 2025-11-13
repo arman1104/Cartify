@@ -7,16 +7,25 @@ import { useCart } from "../context/CartContext";
 const Navbar = () => {
   const { cartCount, refreshPage } = useCart();
   return (
-    <>
-      <header className="w-full bg-gray-50 py-3 sticky top-0 z-50 border-b">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between">
+    <header className="w-full bg-gray-50 py-3 sticky top-0 z-50 border-b">
+      <nav className="max-w-7xl mx-auto px-4">
+        {/* ---------------------------
+            DESKTOP / TABLET ROW (sm and up)
+            Keep the exact desktop layout: Logo | Search (center) | Icons
+           --------------------------- */}
+        <div className="hidden sm:flex items-center justify-between">
+          {/* Logo (left) */}
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
             Cartify <span className="text-3xl">🛍️</span>
           </h1>
 
-          <SearchBar />
+          {/* Search centered (use a fixed width or flex basis) */}
+          <div className="w-1/2 max-w-xl">
+            <SearchBar />
+          </div>
 
-          <div className="flex gap-4">
+          {/* Icons (right) */}
+          <div className="flex gap-4 items-center">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -25,37 +34,89 @@ const Navbar = () => {
                 }`
               }
             >
-              <button>
-                <Home className=" text-gray-700" />
-              </button>
+              <Home className="text-gray-700" />
             </NavLink>
-            <button className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180">
-              <RefreshCw className=" text-gray-700" onClick={refreshPage} />
+
+            <button
+              onClick={refreshPage}
+              className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180"
+            >
+              <RefreshCw className="text-gray-700" />
             </button>
+
             <NavLink
               to="/cart"
+              className={({ isActive }) =>
+                `p-2 rounded-lg hover:bg-blue-100 transition-colors relative ${
+                  isActive ? "bg-blue-100" : ""
+                }`
+              }
+            >
+              <ShoppingCart className="text-gray-700" />
+              {cartCount > 0 && (
+                <span className="absolute -top-3 -right-2 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </NavLink>
+          </div>
+        </div>
+
+        {/* ---------------------------
+            MOBILE ROW (only < sm)
+            Compact top row: Logo (left) + Icons (right)
+           --------------------------- */}
+        <div className="flex items-center pl-2 justify-between sm:hidden">
+          <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
+            Cartify <span className="text-2xl">🛍️</span>
+          </h1>
+
+          <div className="flex gap-3 items-center">
+            <NavLink
+              to="/"
               className={({ isActive }) =>
                 `p-2 rounded-lg hover:bg-blue-100 transition-colors ${
                   isActive ? "bg-blue-100" : ""
                 }`
               }
             >
-              <button className="relative">
-                <ShoppingCart className=" text-gray-700 " />
-                <span className="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
+              <Home className="text-gray-700" />
+            </NavLink>
+
+            <button
+              onClick={refreshPage}
+              className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180"
+            >
+              <RefreshCw className="text-gray-700" />
+            </button>
+
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                `p-2 rounded-lg hover:bg-blue-100 transition-colors relative ${
+                  isActive ? "bg-blue-100" : ""
+                }`
+              }
+            >
+              <ShoppingCart className="text-gray-700" />
+              {cartCount > 0 && (
+                <span className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
                   {cartCount}
                 </span>
-                {/* {cartCount > 0 && (
-                  <span className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-semibold w-6 h-6 flex items-center justify-center rounded-full">
-                    {cartCount}
-                  </span>
-                )} */}
-              </button>
+              )}
             </NavLink>
           </div>
-        </nav>
-      </header>
-    </>
+        </div>
+
+        {/* ---------------------------
+            MOBILE SearchBar (only visible on < sm)
+            Appears below the top row and is full width
+           --------------------------- */}
+        <div className="sm:hidden mt-3 px-0">
+          <SearchBar fullWidth /> {/* we'll support fullWidth prop below */}
+        </div>
+      </nav>
+    </header>
   );
 };
 

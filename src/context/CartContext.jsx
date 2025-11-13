@@ -45,11 +45,20 @@ export const CartProvider = ({ children }) => {
   //     product.title.toLowerCase().includes(search.toLowerCase())
   //   );
 
+  // const filteredProducts =
+  //   search.trim() === ""
+  //     ? products
+  //     : products.filter((product) =>
+  //         product.title.toLowerCase().includes(search.toLowerCase())
+  //       );
+
+  const normalizedSearch = search.trim().toLowerCase();
+
   const filteredProducts =
-    search.trim() === ""
+    normalizedSearch === ""
       ? products
       : products.filter((product) =>
-          product.title.toLowerCase().includes(search.toLowerCase())
+          product.brand.toLowerCase().includes(normalizedSearch)
         );
 
   const refreshPage = () => {
