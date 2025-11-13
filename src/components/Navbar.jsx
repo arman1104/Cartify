@@ -9,10 +9,7 @@ const Navbar = () => {
   return (
     <header className="w-full bg-gray-50 py-3 sticky top-0 z-50 border-b">
       <nav className="max-w-7xl mx-auto px-4">
-        {/* ---------------------------
-            DESKTOP / TABLET ROW (sm and up)
-            Keep the exact desktop layout: Logo | Search (center) | Icons
-           --------------------------- */}
+        {/* ----- DESKTOP  ----- */}
         <div className="hidden sm:flex items-center justify-between">
           {/* Logo (left) */}
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
@@ -37,12 +34,12 @@ const Navbar = () => {
               <Home className="text-gray-700" />
             </NavLink>
 
-            <button
+            {/* <button
               onClick={refreshPage}
               className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180"
             >
               <RefreshCw className="text-gray-700" />
-            </button>
+            </button> */}
 
             <NavLink
               to="/cart"
@@ -62,10 +59,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ---------------------------
-            MOBILE ROW (only < sm)
-            Compact top row: Logo (left) + Icons (right)
-           --------------------------- */}
+        {/* ------- MOBILE ROW --------*/}
         <div className="flex items-center pl-2 justify-between sm:hidden">
           <h1 className="text-2xl font-bold text-gray-800 tracking-wide">
             Cartify <span className="text-2xl">🛍️</span>
@@ -83,12 +77,12 @@ const Navbar = () => {
               <Home className="text-gray-700" />
             </NavLink>
 
-            <button
+            {/* <button
               onClick={refreshPage}
               className="p-2 rounded-lg hover:bg-blue-100 transform transition-transform duration-700 hover:rotate-180"
             >
               <RefreshCw className="text-gray-700" />
-            </button>
+            </button> */}
 
             <NavLink
               to="/cart"
@@ -108,10 +102,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ---------------------------
-            MOBILE SearchBar (only visible on < sm)
-            Appears below the top row and is full width
-           --------------------------- */}
+        {/* -------- MOBILE SearchBar -------- */}
         <div className="sm:hidden mt-3 px-0">
           <SearchBar fullWidth /> {/* we'll support fullWidth prop below */}
         </div>
