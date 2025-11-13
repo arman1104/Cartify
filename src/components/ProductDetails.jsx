@@ -30,19 +30,19 @@ const ProductDetails = () => {
     <div className="min-h-screen bg-gray-50 py-10 px-8 flex flex-col">
       {/* Header */}
       <div className="flex w-full mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 ml-20">
+        <h1 className="text-3xl font-bold text-gray-800 xl:pl-24">
           Product Details
         </h1>
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-row bg-white rounded-2xl shadow-lg p-8 gap-10 mx-auto w-full max-w-7xl">
+      <div className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg p-8 gap-10 mx-auto w-full max-w-7xl">
         {/* Left Side - Product Image */}
         <div className="flex-1 flex items-center justify-center">
           <img
             src={product.image}
             alt={product.title}
-            className="w-96 h-96 max-w-md rounded-2xl object-contain"
+            className="w-full h-40 md:w-96 md:h-96 max-w-md rounded-2xl object-contain "
           />
         </div>
 
@@ -100,7 +100,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
               onClick={() => {

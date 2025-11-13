@@ -27,7 +27,7 @@ const Cart = () => {
 
   // Cart with items
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 ">
+    <div className="min-h-screen bg-gray-50 py-10 px-4">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-8 ">
           🛒 Your Shopping Cart
@@ -35,7 +35,7 @@ const Cart = () => {
       </div>
 
       {/* Container: left (items) / right (summary) */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 ">
+      <div className="max-w-7xl mx-auto flex flex-col  xl:flex-row gap-8">
         {/* Left: Items list */}
         <div className="flex-1 bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden ">
           {/* Header row */}
@@ -119,7 +119,7 @@ const Cart = () => {
         </div>
 
         {/* Right: Order summary */}
-        <aside className="w-full lg:w-96">
+        <aside className="w-full xl:w-96">
           <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 sticky top-24">
             <h2 className="text-lg font-semibold text-gray-800 mb-4">
               Order Summary
