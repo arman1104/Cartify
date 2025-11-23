@@ -25,6 +25,7 @@ import tshirt1 from "../assets/images/tshirt1.png";
 import tshirt2 from "../assets/images/tshirt2.png";
 import tshirt3 from "../assets/images/tshirt3.png";
 import tshirt4 from "../assets/images/tshirt4.png";
+import tshirt5 from "../assets/images/tshirt5.png";
 
 export const products = [
   // Shoes
@@ -294,6 +295,16 @@ export const products = [
     category: "Men's T-Shirts",
     price: 659,
     image: tshirt4,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: 26,
+    brand: "Puma",
+    title: "Crew Neck Cotton Blend T-Shirt",
+    description: "Men Solid Crew Neck Cotton Blend Beige T-Shirt",
+    category: "Men's T-Shirts",
+    price: 1059,
+    image: tshirt5,
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
 ];
