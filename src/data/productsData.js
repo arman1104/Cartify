@@ -21,6 +21,10 @@ import shirt2 from "../assets/images/shirt2.png";
 import shirt3 from "../assets/images/shirt3.png";
 import shirt4 from "../assets/images/shirt4.png";
 import shirt5 from "../assets/images/shirt5.png";
+import tshirt1 from "../assets/images/tshirt1.png";
+import tshirt2 from "../assets/images/tshirt2.png";
+import tshirt3 from "../assets/images/tshirt3.png";
+import tshirt4 from "../assets/images/tshirt4.png";
 
 export const products = [
   // Shoes
@@ -249,6 +253,47 @@ export const products = [
     category: "Men's Shirts",
     price: 1199,
     image: shirt5,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+  },
+  // T-Shirts
+  {
+    id: 22,
+    brand: "Adidas",
+    title: "Printed Crew Neck Polyester T-Shirt",
+    description: "Men Printed Crew Neck Polyester Pink T-Shirt",
+    category: "Men's T-Shirts",
+    price: 2225,
+    image: tshirt1,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: 23,
+    brand: "Adidas",
+    title: "Printed Mandarin Collar Cotton Blend T-Shirt",
+    description: "Men Printed Mandarin Collar Cotton Blend Green T-Shirt",
+    category: "Men's T-Shirts",
+    price: 1799,
+    image: tshirt2,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: 24,
+    brand: "Adidas",
+    title: "Graphic Print Crew Neck Cotton Blend T-Shirt",
+    description: "Men Graphic Print Crew Neck Cotton Blend Black T-Shirt",
+    category: "Men's T-Shirts",
+    price: 959,
+    image: tshirt3,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+  },
+  {
+    id: 25,
+    brand: "Wrogn",
+    title: "Round Neck Cotton Blend Light T-Shirt",
+    description: "Men Printed Round Neck Cotton Blend Light Blue T-Shirt",
+    category: "Men's T-Shirts",
+    price: 659,
+    image: tshirt4,
     sizes: ["S", "M", "L", "XL", "XXL"],
   },
 ];
